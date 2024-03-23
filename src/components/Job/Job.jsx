@@ -1,8 +1,9 @@
-import { MdLocationOn,MdAttachMoney  } from "react-icons/md";
+import { MdLocationOn, MdAttachMoney } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 const Job = ({ job }) => {
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
+    const { id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = job;
     return (
         <div className="card card-compact bg-base-100 shadow-xl border p-4 border-gray-200">
             <figure><img src={logo} alt="Shoes" /></figure>
@@ -15,10 +16,12 @@ const Job = ({ job }) => {
                 </div>
                 <div className="flex gap-4 my-2" >
                     <h2 className="flex"><MdLocationOn className="text-2xl"></MdLocationOn>{location}</h2>
-                    <h2 className="flex"><MdAttachMoney  className="text-2xl"></MdAttachMoney>{salary}</h2>
+                    <h2 className="flex"><MdAttachMoney className="text-2xl"></MdAttachMoney>{salary}</h2>
                 </div>
                 <div className="card-actions">
-                    <button className="btn  bg-blue-500 text-white">View Details</button>
+                    <Link to={`/jobs/${id}`}>
+                        <button className="btn  bg-blue-500 text-white">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

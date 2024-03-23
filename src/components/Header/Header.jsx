@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import { MdShoppingBag } from "react-icons/md";
+
 
 const Header = () => {
     const links = <>
@@ -19,7 +21,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-3xl">Career Hub</a>
+                <a className="btn btn-ghost text-3xl"><MdShoppingBag></MdShoppingBag>Career Hub</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
